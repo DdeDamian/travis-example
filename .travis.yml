@@ -3,3 +3,14 @@ php:
   - '7.1.3'
   - '7.2'
   - nightly
+
+before_script:
+  - curl -sS https://getcomposer.org/installer | php
+  - chmod +x ./composer.phar
+  - ./composer.phar --version
+  - ./composer.phar install --dev
+
+script:
+  - 
+
+after_sucess:
